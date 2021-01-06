@@ -13,18 +13,6 @@
 <body>
     <?php
         include "dbConn.php"; // Using database connection file here
-
-        $sql = "select * from calendar";
-
-        if (isset($_POST['filter'])) {
-            $sport_filter = $_POST['sports'];
-            if($sport_filter == "all"){
-                $sql = "select * from calendar";
-            }
-            else{
-                $sql .= " where sport = '{$sport_filter}'";
-            }
-        }
     ?>
     <nav class="navbar">
         <h2 class="logo" href="index.php">Sports Event Calendar</h2>
@@ -48,7 +36,7 @@
         </form>
     </div>
     <?php
-
+        // Check if all values are given and insert into DB
         if (isset($_POST['addEvent'])){
             $name = filter_input(INPUT_POST, "name");
             $city = filter_input(INPUT_POST, "city");
