@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #00003c;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    display: flex;
+    padding: 20px 30px;
+    flex-direction: row;
+    background-color: #00003e;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links-wrapper{
+    margin-left: auto;
+    font-size: 1.2em;
+    
+}
+.nav-link {
+    margin: 0 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+}
+
+.cards {
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    gap: 40px;
+}
+
+.card {
+    padding: 15px 20px;
+    border: solid 2px #00003e;
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px;
+}
+
+.button {
+    margin-left: 5px;
+}
+
+.sport {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.teams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.league {
+    font-weight: bold;
+    margin-bottom: 10px;
+}

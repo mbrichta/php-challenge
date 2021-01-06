@@ -39,3 +39,39 @@ VALUES(
     'München',
     'Germany'
 );
+
+CREATE VIEW Calendar AS SELECT EVENTS
+    .DateTime,
+    EVENTS.League,
+    EVENTS.Sport,
+    club1.Name AS "HomeTeam",
+    club2.Name AS "AwayTeam"
+FROM EVENTS
+JOIN clubs club1 ON EVENTS
+    ._HomeTeam = club1.ClubID
+JOIN clubs club2 ON EVENTS
+    ._AwayTeam = club2.ClubID;
+
+INSERT INTO `events`(
+    `EventID`,
+    `DateTime`,
+    `League`,
+    `Sport`,
+    `_HomeTeam`,
+    `_AwayTeam`
+)
+VALUES(
+    NULL,
+    '2021-01-24 18:00:00',
+    'La Liga',
+    'Football',
+    '3',
+    '1'
+),(
+    NULL,
+    '2021-02-15 22:00:00',
+    'Champion League',
+    'Football',
+    '4',
+    '2'
+);
