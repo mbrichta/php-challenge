@@ -42,7 +42,8 @@
                 <select name="sports" id="sports">
                     <option value="all">All</option>
                     <?php
-                        $sports = mysqli_query($db,"select distinct(Sport) as Sport from calendar"); // fetch sports data
+                        // fetch unique sports in db
+                        $sports = mysqli_query($db,"select distinct(Sport) as Sport from calendar");
 
                         while($data = mysqli_fetch_array($sports))
                         {
@@ -58,8 +59,9 @@
 
         <div class="cards">
             <?php
+                // Fetch and display data on cards
                 $date_sort = " order by DateTime asc";
-                $records = mysqli_query($db, $sql . $date_sort); // fetch data from database
+                $records = mysqli_query($db, $sql . $date_sort);
                 while($data = mysqli_fetch_array($records))
                 {
             ?>

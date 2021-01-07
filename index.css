@@ -113,3 +113,19 @@ a {
 .submit-button {
     margin: 15px 0;
 }
+
+.info-text {
+    margin: 10px 15px;
+    font-weight: bold;
+    color: rgb(230, 144, 15);
+}
+
+.success-text {
+    font-weight: bold;
+    color: green;
+}
+
+.failed-text {
+    font-weight: bold;
+    color: red;
+}
